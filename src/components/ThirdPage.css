@@ -1,0 +1,62 @@
+.container-box {
+  background: #000000;
+  height: 400px; /* Initial height is 50px more */
+  width: 550px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden; /* Hide overflow to clip animation */
+}
+
+.upper-txt, .lower-txt {
+  position: absolute;
+  color: rgb(255, 247, 247);
+  opacity: 0; /* Initially hidden */
+  transition: opacity 1s ease, transform 1s ease; /* Smooth transition for visibility change and movement */
+}
+
+.upper-txt {
+  top: 8px;
+  left: 16px;
+  transform: translateY(50px); /* Initial position below */
+}
+
+.lower-txt {
+  bottom: 3px;
+  right: 2px;
+  transform: translateY(50px); /* Initial position below */
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0); /* Move to final position */
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateY(50px); /* Initial position */
+}
+
+@keyframes extendAndContract {
+  0% {
+    height: 400px; /* Start at 400px */
+  }
+  100% {
+    height: 250px;
+  }
+}
+
+.animate-container {
+  animation: extendAndContract 1s ease-in-out forwards;
+}
+
+.cup {
+  height: 350px;
+  width: 550px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}

@@ -1,0 +1,44 @@
+.footer {
+    height: 100vh; /* Set height to 100% of the viewport height */
+    width: 100%;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .mail {
+    font-weight: 300;
+    font-size: 24px; /* Increase the font size */
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out, text-decoration 0.3s ease-in-out;
+  }
+  
+  .mail:hover {
+    color: #ff9900; /* Change color on hover */
+    text-decoration: underline; /* Add underline on hover */
+  }
+  .sec-elem {
+    font-size: 190px;
+    font-weight: bolder;
+    animation-delay: 1s;
+    color: white;
+  }  
+  .thi-elem{
+    font-weight: 300;
+    font-size: 24px; /* Increase the font size */
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out, text-decoration 0.3s ease-in-out;
+  }
+  .inst:hover {
+    color: #ff9900; /* Change color on hover */
+    text-decoration: underline; /* Add underline on hover */
+  }
+  .git1:hover {
+    color: #ff9900; /* Change color on hover */
+    text-decoration: underline; /* Add underline on hover */
+  }
