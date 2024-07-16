@@ -26,6 +26,15 @@ const App = () => {
     };
   }, []);
 
+  useEffect(() => {
+    // Simulating loading delay for demo purposes
+    const timeout = setTimeout(() => {
+      setLoading(false);
+    }, 2000); // Adjust as needed
+
+    return () => clearTimeout(timeout);
+  }, []);
+
   if (loading) {
     return <Loader setLoading={setLoading} />;
   }
@@ -34,10 +43,10 @@ const App = () => {
     <div>
       <Home />
       <div className="cube-container">
-        <CubeModel rotation={rotation} scale={[1, 1, 1]} gltfPath="../src/assets/cube.glb" />
-        <CubeModel rotation={rotation} scale={[0.5, 0.5, 0.5]} gltfPath="../src/assets/cube1.glb" />
-        <CubeModel rotation={rotation} scale={[0.7, 0.7, 0.7]} gltfPath="../src/assets/cube3.glb" />
-        <CubeModel rotation={rotation} scale={[1.2, 1.2, 1.2]} gltfPath="../src/assets/cube4.glb" />
+        <CubeModel rotation={rotation} scale={[1, 1, 1]} gltfPath="/src/assets/cube.glb" />
+        <CubeModel rotation={rotation} scale={[0.5, 0.5, 0.5]} gltfPath="/src/assets/cube1.glb" />
+        <CubeModel rotation={rotation} scale={[0.7, 0.7, 0.7]} gltfPath="/src/assets/cube3.glb" />
+        <CubeModel rotation={rotation} scale={[1.2, 1.2, 1.2]} gltfPath="/src/assets/cube4.glb" />
       </div>
       <div className="sc"><p>SCROLL</p></div>
       <Pic />
